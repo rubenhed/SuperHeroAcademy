@@ -4,10 +4,10 @@ class CreateCourses < ActiveRecord::Migration[7.1]
       t.string :title
       t.text :description
       t.integer :duration
-      t.integer :level
+      t.integer :level, default: 3
       t.integer :price
       t.string :location
-      t.boolean :online
+      t.boolean :online, default: false
       t.datetime :start_time
       t.references :user, foreign_key: true # this is imp
 
