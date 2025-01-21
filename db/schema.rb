@@ -10,9 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_01_18_081630) do
+ActiveRecord::Schema[7.1].define(version: 2025_01_18_095339) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "status"
+    t.bigint "course_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_bookings_on_course_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "duration"
+    t.integer "level"
+    t.integer "price"
+    t.string "location"
+    t.boolean "online"
+    t.datetime "start_time"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_courses_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +52,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_18_081630) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "courses"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "courses", "users"
 end
