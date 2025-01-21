@@ -1,0 +1,31 @@
+=> 
+[[32m#<Course:0x00007f8151514800[0m
+  id: [34m[1m2[0m,
+  title: [31m[1m"[0m[31mFlying[0m[31m[1m"[0m,
+  description: [31m[1m"[0m[31mlearn how to fly[0m[31m[1m"[0m,
+  duration: [34m[1m180[0m,
+  level: [31m[1m"[0m[31mintermediate[0m[31m[1m"[0m,
+  price: [36m[1mnil[0m,
+  location: [36m[1mnil[0m,
+  online: [36m[1mnil[0m,
+  start_time: [36m[1mnil[0m,
+  user_id: [34m[1m1[0m,
+  created_at:
+   Sat, 18 Jan 2025 10:23:09.526321000 UTC +00:00,
+  updated_at:
+   Sat, 18 Jan 2025 10:23:09.526321000 UTC +00:00[32m>[0m,
+ [32m#<Course:0x00007f8150cdd998[0m
+  id: [34m[1m1[0m,
+  title: [31m[1m"[0m[31mFlying[0m[31m[1m"[0m,
+  description: [31m[1m"[0m[31mlearn how to fly[0m[31m[1m"[0m,
+  duration: [34m[1m180[0m,
+  level: [31m[1m"[0m[31mintermediate[0m[31m[1m"[0m,
+  price: [36m[1mnil[0m,
+  location: [36m[1mnil[0m,
+  online: [36m[1mnil[0m,
+  start_time: [36m[1mnil[0m,
+  user_id: [34m[1m1[0m,
+  created_at:
+   Sat, 18 Jan 2025 10:14:40.142399000 UTC +00:00,
+  updated_at:
+   Sat, 18 Jan 2025 10:33:23.741543000 UTC +00:00[32m>[0m]
