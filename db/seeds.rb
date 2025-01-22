@@ -33,3 +33,12 @@ course4 = Course.create!(title: "Imaginary Constructs", description: "Create obj
 course5 = Course.create!(title: "Healing Factor", description: "Heal yourself and others", duration: 60, level: 0, user: user2)
 course6 = Course.create!(title: "Invisibility", description: "Become invisible", duration: 90, level: 1, user: user3)
 course7 = Course.create!(title: "Super Strength", description: "Have a super strong and durable body, impervious to most injuries", duration: 90, level: 1, user: user1)
+
+booking1 = Booking.create!(status: 2, user: user1, course: course1)
+puts "Creating booking1..."
+booking2 = Booking.create!(status: 2, user: user2, course: course2)
+puts "Creating booking2..."
+booking3 = Booking.create!(status: 0, user: user3, course: course3)
+puts "Creating booking3..."
+booking4 = Booking.create!(status: 1, user: user1, course: course4)
+puts "Creating booking4..."
