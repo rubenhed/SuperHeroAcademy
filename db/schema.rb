@@ -28,10 +28,10 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_18_095339) do
     t.string "title"
     t.text "description"
     t.integer "duration"
-    t.integer "level"
+    t.integer "level", default: 3
     t.integer "price"
     t.string "location"
-    t.boolean "online"
+    t.boolean "online", default: false
     t.datetime "start_time"
     t.bigint "user_id"
     t.datetime "created_at", null: false

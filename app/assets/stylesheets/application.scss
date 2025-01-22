@@ -10,3 +10,21 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// <-----ensure the footer is at the bottom of every page----->>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* ensure this is the full window height */
+}
+
+.content {
+  flex: 1; /* fill in all empty blanks */
+}
+// <-----ensure the footer is at the bottom of every page----->>
