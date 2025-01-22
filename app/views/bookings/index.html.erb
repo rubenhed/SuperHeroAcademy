@@ -1,2 +1,15 @@
 <h1>Bookings#index</h1>
 <p>Find me in app/views/bookings/index.html.erb</p>
+<% @bookings.each do |booking| %>
+  <% course = booking.course %>
+
+  <a href=<%= course_path(course) %> class="text-decoration-none">
+    <div class="card col-3">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= booking.course.title %></h5>
+        <p class="card-text"><%= booking.course.description %></p>
+      </div>
+    </div>
+  </a>
+<% end %>
