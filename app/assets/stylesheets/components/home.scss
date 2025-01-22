@@ -24,12 +24,12 @@ $color-fifth: #f4f1de;
   width: 50%;
   position: relative;
 }
-.content {
+.landing-content {
   position: relative;
 }
 
 // <----build shadowing effect---->
-.content::before {
+.landing-content::before {
   content: '';
   position: absolute;
   top: 0;
