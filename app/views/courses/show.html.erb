@@ -1,2 +1,19 @@
-<h1>Courses#show - <%= @course.title %> </h1>
-<p>Find me in app/views/courses/show.html.erb</p>
+
+<div class="course-cover-page">
+  <div class="course-cover">
+    <div class="course-main-info">
+      <h1><%=@course.title%></h1>
+      <p><%=@course.description%></p>
+    </div>
+    <div class="course-price-tag">
+        <%= image_tag "student.png", class: "course-photo"%>
+        <div class="course-price">
+          <h2>Price: <%=@course.price%></h2>
+        </div>
+        <button class="btn price-btn">Buy this course!!</button>
+    </div>
+  </div>
+  <div class="course-detail">
+  </div>
+</div>
+
