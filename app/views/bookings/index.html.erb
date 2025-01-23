@@ -10,7 +10,7 @@
             <p class="card-text"><%= booking.course.description %></p>
             <div class="d-flex">
               <a href=<%= course_path(course) %> class="btn btn-primary me-auto">View Course</a>
-              <%= link_to "Delete", booking_path(booking), class: "btn btn-warning", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
+              <%= link_to "Delete", booking_path(booking), class: "btn btn-warning", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this booking?" } %>
             </div>
           </div>
         </div>
