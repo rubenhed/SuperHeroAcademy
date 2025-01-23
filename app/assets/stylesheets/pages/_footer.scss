@@ -1,9 +1,14 @@
-// Specific CSS for your home-page
-@import "navbar";
-
 //color theme for the website
 $color-first: #f2cc8f;
 $color-second: #81b29a;
 $color-third: #3d405b;
 $color-fourth: #e07a5f;
 $color-fifth: #f4f1de;
+
+/* Footer style */
+.footer {
+  background-color: $color-third;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
