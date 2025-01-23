@@ -8,16 +8,38 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-# create a course
-# Create a course associated with user_id: 1
-Course.create!(
-  title: "Ruby on Rails Mastery",
-  description: "This course will teach you how to build full-stack web applications with Ruby on Rails. You'll learn how to structure a Rails application, use Active Record, and deploy your app. Perfect for beginners and intermediate developers!",
-  duration: 8, # Duration in hours/days (based on your application logic)
-  level: 2, # Assuming level ranges from beginner (1) to advanced (5)
-  price: 120, # Price in your preferred currency
-  location: "Online",
-  online: true,
-  start_time: "2025-02-01 10:00:00",
-  user_id: 1 # Associate the course with the existing user
-)
+puts "Clearing bookings..."
+Booking.destroy_all
+
+puts "Clearing courses..."
+Course.destroy_all
+
+puts "Clearing users..."
+User.destroy_all
+
+user1 = User.create!(email: "zzz@gmail.com", password: "123123", name: "Rayz")
+puts "Creating user1..."
+user2 = User.create!(email: "yzyz@gmail.com", password: "321321", name: "Amy")
+puts "Creating user2..."
+user3 = User.create!(email: "wwyy@gmail.com", password: "123321", name: "Ruben")
+puts "Creating user3..."
+course1 = Course.create!(title: "Flying", description: "Learn to fly without wings or machines, just by yourself", duration: 60, level: 0, user: user1)
+puts "Creating course1..."
+course2 = Course.create!(title: "Telekinesis", description: "Move objects with your mind", duration: 90, level: 0, user: user2)
+puts "Creating course2..."
+course3 = Course.create!(title: "Shape-shifting", description: "Change your appearance at will", duration: 120, level: 1, user: user3)
+puts "Creating course3..."
+course4 = Course.create!(title: "Imaginary Constructs", description: "Create objects out of your imagination", duration: 120, level: 1, user: user1)
+course5 = Course.create!(title: "Healing Factor", description: "Heal yourself and others", duration: 60, level: 0, user: user2)
+course6 = Course.create!(title: "Invisibility", description: "Become invisible", duration: 90, level: 1, user: user3)
+course7 = Course.create!(title: "Super Strength", description: "Have a super strong and durable body, impervious to most injuries", duration: 90, level: 1, user: user1)
+
+booking1 = Booking.create!(status: 2, user: user1, course: course1)
+puts "Creating booking1..."
+booking2 = Booking.create!(status: 2, user: user2, course: course2)
+puts "Creating booking2..."
+booking3 = Booking.create!(status: 0, user: user3, course: course3)
+puts "Creating booking3..."
+booking4 = Booking.create!(status: 1, user: user1, course: course4)
+puts "Creating booking4..."
+
