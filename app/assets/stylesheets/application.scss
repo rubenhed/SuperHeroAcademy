@@ -8,9 +8,8 @@
 @import "font-awesome";
 
 // Your CSS partials
-@import "components/index";
 @import "pages/index";
-@import "components/home";
+@import "pages/home";
 
 // <-----ensure the footer is at the bottom of every page----->>
 html, body {
