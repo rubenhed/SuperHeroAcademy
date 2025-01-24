@@ -5,4 +5,76 @@
 @import "components/avatar";
 @import "components/form_legend_clear";
 @import "components/navbar";
+@import "components/searchbar";
 @import "show";
+
+.course-index-cover-section {
+  background-color: $color-first;
+  padding: 10px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.course-index-cover-photo {
+  margin-left: 1000px;
+}
+
+.course-index-cover-word {
+  top: 80px;
+  left: 100px;
+  width: 800px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  background-color: $color-fifth;
+  padding: 50px;
+}
+
+.course-index-fixed-card {
+  width: 100%;
+  height: 370px;        /* set fixed height */
+  display: flex;        /* use flex to adjust content */
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;     /* avoid content overflow */
+}
+.course-index-card-img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.course-index-card-body {
+  flex-grow: 1;
+}
+
+.course-index-card-title {
+  margin-bottom: 0;
+  font-size: 25px;
+  font-weight: bold;
+  white-space: nowrap;  /* prevent words from changing lines */
+  overflow: hidden;     /* avoid content overflow */
+  text-overflow: ellipsis;
+}
+
+.course-index-card-teacher {
+  font-size: 15px;
+  margin-bottom: 0;
+  color: gray;
+}
+.course-index-card-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.course-index-btn{
+  width: 60px;
+  border: 2px solid $color-fourth; /* White outline */
+  background-color: $color-fourth; /* Transparent background */
+  color: white;           /* White text color */
+}
+.course-index-btn:hover{
+  border: 2px solid $color-fourth; /* White outline */
+  background-color: transparent; /* Transparent background */
+  color: $color-fourth;           /* White text color */
+  font-weight: bold;
+}

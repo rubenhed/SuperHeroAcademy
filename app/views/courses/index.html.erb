@@ -1,41 +1,42 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-  <div class="container-fluid">
-    <p>(We can change this navbar later if needed)</p>
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-<div class="main m-4">
-  <h1>Courses</h1>
-  <p>Find all the superpower courses here.</p>
-</div>
+
+
 <div class="container">
+
+  <%=render "pages/searchbar" %>
+  <div class="course-index-cover-section">
+    <div class="course-index-cover-word">
+      <h1> Welcome to SuperHeroAcademy! </h1>
+      <h3> You can check your current progress <%= link_to "here", bookings_path %> and keep going on your way to become a hero!</h3>
+    </div>
+    <%= image_tag "superbaby.png", class: "course-index-cover-photo" %>
+  </div>
+
+
   <div class="row">
     <% @courses.each do |course| %>
-      <div class="col-md-4 col-sm-6">
-        <div class="card mb-4 shadow-sm p-3">
+      <div class="col-md-3 col-sm-8">
+        <div class="card mb-4 shadow-sm p-3 course-index-fixed-card">
           <div class="d-flex justify-content-center">
             <% unless course.photo.key.nil? %>
-              <%= image_tag course.photo , height: 150, width: 150, crop: :fill%>
+              <%= image_tag course.photo, class: "course-index-card-img", height: 150, width: 150, crop: :fill%>
             <% else %>
               <div class="d-flex align-items-center" style="height: 200px; width: auto">
                 <h3>No Image here 😑</h3>
               </div>
             <% end %>
           </div>
-          <div class="card-body">
-            <h5 class="card-title"> <%= course.title %> </h5>
-            <p class="card-text"> <%= course.description %> </p>
+          <div class="course-index-card-body">
+            <h5 class="course-index-card-title"> <%= course.title %> </h5>
+            <p class="course-index-card-teacher">Amy Huang</p>
+            <p class="course-index-card-text">¥3500</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <%= link_to 'View', course_path(course), class: 'btn btn-sm btn-outline-secondary' %>
+                <%= link_to 'View', course_path(course), class: 'btn btn-sm btn-outline-secondary course-index-btn' %>
               </div>
             </div>
           </div>
         </div>
       </div>
     <% end %>
-  </diV>
+  </div>
 </div>
