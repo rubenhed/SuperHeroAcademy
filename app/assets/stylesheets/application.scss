@@ -14,17 +14,20 @@
 // <-----ensure the footer is at the bottom of every page----->>
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
+  overflow-y: hidden; /* 隱藏垂直捲軸 */
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100%; /* ensure this is the full window height */
+  height: 100vh; /* ensure this is the full window height */
 }
 
 .content {
   flex: 1; /* fill in all empty blanks */
+  overflow: hidden; /* 防止溢出 */
 }
 // <-----ensure the footer is at the bottom of every page----->>
