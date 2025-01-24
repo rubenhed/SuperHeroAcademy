@@ -29,7 +29,10 @@ class CoursesController < ApplicationController
   def edit
   end
 
-  def delete
+  def destroy
+    @course = Course.find(params[:id])
+    @course.destroy
+    redirect_to teacher_courses_path, status: :see_other
   end
 
   def update

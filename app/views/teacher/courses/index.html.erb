@@ -1,2 +1,24 @@
-<h1>Teacher::Courses#index</h1>
-<p>Find me in app/views/courses/create.html.erb</p>
+
+<div class="container my-3">
+  <h1 class="text-decoration-underline">My courses</h1>
+
+  <div class="row">
+    <% if @user %>
+      <% @user.courses.each do |course| %>
+        <div class="col-4 mb-3">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz2TaeZnV3ZJBe7PIQfgi8AeLz80CtGbprvw&s" width="100px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= course.title %></h5>
+              <p class="card-text"><%= course.description %></p>
+              <div class="d-flex">
+                <a href=<%= course_path(course) %> class="btn btn-primary me-auto">View Course</a>
+                <%= link_to "Delete", course_path(course), class: "btn btn-warning", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this course?" } %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
