@@ -1,2 +1,8 @@
 // Import page-specific CSS files here.
 @import "home";
+// Import your components CSS files here.
+@import "components/alert";
+@import "components/avatar";
+@import "components/form_legend_clear";
+@import "components/navbar";
+@import "show";
