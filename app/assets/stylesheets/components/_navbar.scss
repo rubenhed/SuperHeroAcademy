@@ -39,3 +39,14 @@
   margin-left: 10px;
   margin-right: 40px;
 }
+.home-welcome {
+  display: flex; /* 啟用 Flexbox */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  text-align: center; /* 文字居中對齊 */
+}
+
+.navbar-word-welcome{
+  height: 10px;
+  color: $color-first
+}
