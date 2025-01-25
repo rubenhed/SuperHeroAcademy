@@ -20,18 +20,30 @@
   </div>
   <div class="course-cover">
     <div class="course-main-info">
-      <h1><%=@course.title%></h1>
-      <p><%=@course.description%></p>
+      <div class="course-show-title">
+        <h1><%=@course.title%></h1>
+      </div>
+      <div class="course-show-cover-page-instructor-wrapping">
+        <div class="text-overlay">
+          <%= @course.description%>
+        </div>
+        <%= image_tag "drawing4", class: "course-show-cover-page-instructor"%>
+      </div>
     </div>
     <div class="course-price-tag">
         <%= image_tag @course.photo, class: "course-photo"%>
         <div class="course-price">
-          <h2>Price: <%=@course.price%></h2>
+          <h2>¥ <%=@course.price%></h2>
         </div>
         <%= button_to "I want to buy this course!!", bookings_path(course_id: @course.id), class: "btn price-btn" %>
     </div>
   </div>
-  <div class="course-detail">
-    <%= @course.syllabus %>
+  <div class="course-show-detail">
+    <div class="course-show-detail-syllabus-title">
+    <h2>What You Can Learn From This Course:</h2>
+    </div>
+    <div class="course-show-syllabus">
+      <%=simple_format(@course.syllabus)%>
+    </div>
   </div>
 </div>

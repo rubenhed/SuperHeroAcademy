@@ -29,13 +29,15 @@ $color-fifth: #f4f1de;
   width:50%;
   margin-top:40px;
   margin-left: 100px;
+  display: flex;
+  flex-direction: column;
 }
 .course-price-tag{
   background-color: white;
   padding: 0;
   margin-top: 80px;
   width: 300px;
-  height: 400px;
+  height: 500px;
   z-index: 100;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -47,7 +49,8 @@ $color-fifth: #f4f1de;
 }
 
 .course-price{
-  color: black;
+  color: $color-third;
+  margin: 10px;
 }
 .price-btn{
   border: 2px solid white; /* White outline */
@@ -57,10 +60,14 @@ $color-fifth: #f4f1de;
   margin: 10px 30px;
 }
 .course-photo{
-  width: 100%;
+  width: 300px;
+  height: 300px;
 }
-.course-detail{
+.course-show-detail{
+  margin-top: 300px;
+  width: 50%;
   height: 900px;
+  margin-left: 100px;
 }
 
 .fa-heart{
@@ -70,4 +77,36 @@ $color-fifth: #f4f1de;
 .btn-group{
   display: flex;
   justify-content: space-between;
+}
+
+.course-show-cover-page-instructor-wrapping {
+  width: 800px;
+  height: 800px;
+  position: relative;
+}
+.course-show-cover-page-instructor {
+  width: 100%; /* 繼承父容器的寬度 */
+  height: 100%; /* 繼承父容器的高度 */
+  object-fit: cover; /* 等比例縮放，填滿容器 */
+}
+
+.course-show-detail-syllabus-title {
+  margin-bottom: 50px;
+}
+
+.course-show-cover-page-description {
+  z-index: 1000;
+}
+
+.text-overlay {
+  position: absolute;
+  width: 50%;
+  top: 36%;
+  left: 36%;
+  color: black;
+  padding: 5px 10px;
+  font-size: 20px;
+  text-align: center;
+  text-wrap: wrap;
+  margin: 10px;
 }
