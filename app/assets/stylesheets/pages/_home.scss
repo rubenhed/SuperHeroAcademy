@@ -80,3 +80,13 @@
   color: white;           /* White text color */
   font-weight: bold;
 }
+
+.home-sign-up {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-custom-sign-btn:hover {
+  background-color: $color-first;
+  color: black;
+}

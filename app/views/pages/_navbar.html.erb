@@ -21,5 +21,17 @@
           </div>
         </li>
       </ul>
+      <div class="home-sign-up">
+          <div class="home-custom-sign-btn">
+            <%= link_to new_user_session_path do %>
+            <button type="button" class="btn home-custom-sign-btn" style="color: white;">Log In</button>
+            <% end %>
+          </div>
+          <div class="home-custom-sign-btn">
+            <%= link_to new_user_registration_path do %>
+            <button type="button" class="btn home-custom-sign-btn" style="color: white;">Sign Up</button>
+            <% end %>
+          </div>
+      </div>
     </div>
 </nav>
