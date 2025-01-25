@@ -19,8 +19,8 @@
       <div class="col-md-3 col-sm-8">
         <div class="card mb-4 shadow-sm p-3 course-index-fixed-card">
           <div class="d-flex justify-content-center">
-            <% if false %>
-              <%= image_tag course.photo, class: "course-index-card-img", height: 150, width: 150, crop: :fill %>
+            <% if course.photo.key.present? %>
+              <%= cl_image_tag course.photo.key, class: "course-index-card-img", height: 150, width: 150, crop: :fill %>
             <% else %>
               <div class="d-flex align-items-center" style="height: 200px; width: auto">
                 <h3>No Image here 😑</h3>

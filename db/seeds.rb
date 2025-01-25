@@ -406,4 +406,3 @@ booking3 = Booking.create!(status: 0, user: user3, course: course3)
 puts "Creating booking3..."
 booking4 = Booking.create!(status: 1, user: user1, course: course4)
 puts "Creating booking4..."
-
