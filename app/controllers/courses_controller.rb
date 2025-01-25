@@ -1,9 +1,6 @@
 class CoursesController < ApplicationController
   def index
-    @courses = Course.all.map do |course|
-      course.image_path = url_for(course.photo)
-      course
-    end
+    @courses = Course.all
   end
 
   def new
