@@ -31,9 +31,14 @@
             <h5 class="course-index-card-title"> <%= course.title %> </h5>
             <p class="course-index-card-teacher">Amy Huang</p>
             <p class="course-index-card-text">¥3500</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <%= link_to 'View', course_path(course), class: 'btn btn-sm btn-outline-secondary course-index-btn' %>
+            <div class="course-index-card-bottom-wrapping">
+              <div class="btn-group course-index-card-bottom">
+                <div>
+                  <%= link_to 'View', course_path(course), class: 'btn btn-sm btn-outline-secondary course-index-btn' %>
+                </div>
+                <div class="course-index-heart-wrapping">
+                  <i class="far fa-heart course-index-heart"></i>
+                </div>
               </div>
             </div>
           </div>

@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center; 
+  text-align: center;
 }
 
 .course-index-cover-word h1 {
@@ -98,10 +98,35 @@
   border: 2px solid $color-fourth; /* White outline */
   background-color: $color-fourth; /* Transparent background */
   color: white;           /* White text color */
+  flex: 1;
 }
 .course-index-btn:hover{
   border: 2px solid $color-fourth; /* White outline */
   background-color: transparent; /* Transparent background */
   color: $color-fourth;           /* White text color */
   font-weight: bold;
+}
+.course-index-heart-wrapping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.course-index-heart {
+  margin-left: 170px;
+  font-size: 1.8rem; /* 調整愛心大小 */
+  color: gray; /* 初始顏色 */
+  cursor: pointer;
+}
+.course-index-comment {
+  margin-right: 100px;
+  font-size: 1.8rem; /* 調整愛心大小 */
+  color: gray; /* 初始顏色 */
+  cursor: pointer;
+}
+
+.course-index-card-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

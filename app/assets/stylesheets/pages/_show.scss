@@ -5,10 +5,18 @@ $color-third: #3d405b;
 $color-fourth: #e07a5f;
 $color-fifth: #f4f1de;
 
+// set the search bar to be the most right side of the screen
+.course-show-search-bar-wrapping {
+  padding-right: 0;
+}
+.course-show-search-bar-container {
+  margin-right: 0;
+}
+// set the search bar to be the most right side of the screen
+
 .course-cover{
   background-color: $color-third;
   color:white;
-  margin-top:60px;
   padding-top: 60px;
   padding-right: 100px;
   height: 300px;
@@ -53,4 +61,13 @@ $color-fifth: #f4f1de;
 }
 .course-detail{
   height: 900px;
+}
+
+.fa-heart{
+  size: 50px;
+}
+
+.btn-group{
+  display: flex;
+  justify-content: space-between;
 }
