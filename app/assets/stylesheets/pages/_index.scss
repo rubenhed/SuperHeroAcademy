@@ -23,14 +23,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%; /* 使用百分比，讓圖片區塊自適應 */
-  max-width: 800px; /* 限制最大寬度 */
+  width: 30%; /* use percentage for responsive design */
+  max-width: 800px; /* limit screen width maximum */
 }
 .course-index-cover-photo {
-  width: 100%; /* 圖片寬度填滿父容器 */
-  height: auto; /* 高度等比例縮放 */
-  object-fit: contain; /* 保持圖片比例不變，並適應容器大小 */
-  max-height: 400px; /* 限制圖片的最大高度 */
+  width: 100%; /* fill parent element */
+  height: auto; /* proportional zoom in/zoom out */
+  object-fit: contain; /* keep the raio and fill parent container */
+  max-height: 400px; /* limit the maximum of the height */
 }
 
 .course-index-cover-word {
@@ -39,21 +39,21 @@
   padding: 3%;
   height: 30%;
   width: 65%;
-  max-width: 800px; /* 限制最大寬度 */
-  min-width: 300px; /* 限制最小寬度，避免文字太小 */
+  max-width: 800px; /* limit the maximum the width */
+  min-width: 300px; /* limit the maximum the width to prevent words from getting too small */
   margin-left: 8%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center; /* 文字居中 */
+  text-align: center; 
 }
 
 .course-index-cover-word h1 {
-  font-size: 4vw; /* 字體大小等於視窗寬度的 4% */
+  font-size: 4vw;  /* use percentage for responsive design */
 }
 
 .course-index-cover-word h3 {
-  font-size: 2vw; /* 字體大小等於視窗寬度的 2% */
+  font-size: 2vw;  /* use percentage for responsive design */
 }
 
 .course-index-fixed-card {
