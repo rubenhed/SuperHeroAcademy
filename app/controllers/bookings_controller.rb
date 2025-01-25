@@ -17,9 +17,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(
-    user_id: User.fist.id,
-    course_id: params[:course_id]
-  )
+      course_id: params[:course_id],
+      user: current_user,
+      status: :pending
+    )
 
     if @booking.save
       flash[:alert] = "Booking successfully created!"
@@ -36,9 +37,9 @@ class BookingsController < ApplicationController
   def new
   end
 
-  private
+  # private
 
-  def booking_params
-    params.require(:booking).permit(:status, :course_id, :user_id)
-  end
+  # def booking_params
+  #   params.require(:booking).permit(:course_id)
+  # end
 end
