@@ -4,7 +4,7 @@
       <% course = booking.course %>
       <div class="col-4 mb-3">
         <div class="card">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz2TaeZnV3ZJBe7PIQfgi8AeLz80CtGbprvw&s" width="100px" class="card-img-top" alt="...">
+          <%= image_tag booking.course.photo, class: "card-img-top", height: 400, width: 100, crop: :fill%>
           <div class="card-body">
             <h5 class="card-title"><%= booking.course.title %></h5>
             <p class="card-text"><%= booking.course.description %></p>
