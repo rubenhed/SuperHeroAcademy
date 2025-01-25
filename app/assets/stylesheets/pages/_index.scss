@@ -13,20 +13,47 @@
   padding: 10px;
   position: relative;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.course-index-cover-photo-wrapping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%; /* 使用百分比，讓圖片區塊自適應 */
+  max-width: 800px; /* 限制最大寬度 */
+}
 .course-index-cover-photo {
-  margin-left: 1000px;
+  width: 100%; /* 圖片寬度填滿父容器 */
+  height: auto; /* 高度等比例縮放 */
+  object-fit: contain; /* 保持圖片比例不變，並適應容器大小 */
+  max-height: 400px; /* 限制圖片的最大高度 */
 }
 
 .course-index-cover-word {
-  top: 80px;
-  left: 100px;
-  width: 800px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  position: absolute;
   background-color: $color-fifth;
-  padding: 50px;
+  padding: 3%;
+  height: 30%;
+  width: 65%;
+  max-width: 800px; /* 限制最大寬度 */
+  min-width: 300px; /* 限制最小寬度，避免文字太小 */
+  margin-left: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; /* 文字居中 */
+}
+
+.course-index-cover-word h1 {
+  font-size: 4vw; /* 字體大小等於視窗寬度的 4% */
+}
+
+.course-index-cover-word h3 {
+  font-size: 2vw; /* 字體大小等於視窗寬度的 2% */
 }
 
 .course-index-fixed-card {
