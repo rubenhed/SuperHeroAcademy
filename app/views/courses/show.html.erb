@@ -1,3 +1,4 @@
+
 <% if flash[:notice] %>
   <div class="alert alert-success">
     <%= flash[:notice] %>
@@ -7,17 +8,16 @@
 <div class="course-cover-page">
   <div class="course-show-search-bar-wrapping">
     <div class="my-3">
-    <div class="container course-show-search-bar-container">
+      <div class="container course-show-search-bar-container">
         <div class="search-wrapper me-0">
-            <div class="search-box">
-                <input type="text" class="search-input form-control" placeholder="Search your next superhero course...">
-                <i class="fas fa-search search-icon"></i>
-            </div>
+          <div class="search-box">
+            <input type="text" class="search-input form-control" placeholder="Search your next superhero course...">
+            <i class="fas fa-search search-icon"></i>
+          </div>
         </div>
+      </div>
     </div>
-</div>
   </div>
-
   <div class="course-cover">
     <div class="course-main-info">
       <h1><%=@course.title%></h1>
@@ -32,5 +32,6 @@
     </div>
   </div>
   <div class="course-detail">
+    <%= @course.syllabus %>
   </div>
 </div>
