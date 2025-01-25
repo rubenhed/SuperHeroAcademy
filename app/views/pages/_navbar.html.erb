@@ -21,11 +21,16 @@
         </div>
       </li>
     </ul>
-    <div class="home-sign-up">
+  </div>
+  <div class="home-sign-up">
       <% if current_user %>
+        <div class="home-welcome">
+          <p class="navbar-word-welcome">Welcome back, <%= current_user.name %>!</p>
+        </div>
         <div>
-          <p class="navbar-word mb-0">Welcome back, <%= current_user.name %>!</p>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+          <%= link_to bookings_path do %>
+            <button type="button" class="btn home-custom-sign-btn navbar-word mb-0" style="color: white;">My Courses</button>
+          <% end %>
         </div>
       <% else %>
         <div class="home-custom-sign-btn">
@@ -40,5 +45,4 @@
         </div>
       <% end %>
     </div>
-  </div>
 </nav>
