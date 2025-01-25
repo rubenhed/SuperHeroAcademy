@@ -4,7 +4,7 @@
       <% course = booking.course %>
       <div class="col-4 mb-3">
         <div class="card">
-          <%= cl_image_tag booking.course.photo.key, class: "card-img-top", height: 400, width: 100, crop: :fill%>
+          <%= cl_image_tag booking.course.photo.key, class: "card-img-top", height: 150, width: 150, crop: :fill%>
           <div class="card-body">
             <h5 class="card-title"><%= booking.course.title %></h5>
             <p class="card-text"><%= booking.course.description %></p>
