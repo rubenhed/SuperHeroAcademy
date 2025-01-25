@@ -17,7 +17,6 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-y: hidden; /* 隱藏垂直捲軸 */
 }
 
 .wrapper {
@@ -28,6 +27,5 @@ html, body {
 
 .content {
   flex: 1; /* fill in all empty blanks */
-  overflow: hidden; /* 防止溢出 */
 }
 // <-----ensure the footer is at the bottom of every page----->>
