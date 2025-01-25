@@ -4,7 +4,9 @@
 .home-landing-content{
   display: flex;
   position: relative;
-  height: 100vh;
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
 }
 .home-teacher-pic, .home-student-pic {
   width: 100%;
@@ -13,14 +15,11 @@
   object-position: center;
 }
 
-.home-teacher{
+.home-teacher, .home-student {
+  width: 50%;       /* 確保每個部分佔據正確比例 */
+  height: 100%;     /* 填滿父容器高度 */
+  box-sizing: border-box; /* 包含 padding */
   position: relative;
-  width: 50%;
-}
-
-.home-student{
-  position: relative;
-  width: 50%;
 }
 
 // <----build shadowing effect---->
