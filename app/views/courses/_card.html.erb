@@ -1,0 +1,29 @@
+<div class="col-md-3 col-sm-8">
+        <div class="card mb-4 shadow-sm p-3 course-index-fixed-card">
+          <div class="course-index-card-title"> <%= course.title %>
+          </div>
+          <div class="course-index-card-level">Difficulty: ⭐⭐⭐</div>
+          <div class="d-flex justify-content-center course-index-card-photo">
+            <% if course.photo.key.present? %>
+              <%= cl_image_tag course.photo.key, class: "course-index-card-img", height: 150, width: 150, crop: :fill %>
+            <% else %>
+              <div class="d-flex align-items-center" style="height: 200px; width: auto">
+                <h3>No Image here 😑</h3>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="course-index-card-body">
+            <p class="course-index-card-teacher">Amy Huang | <%= course.location %></p>
+            <p class="course-index-card-text">¥3500</p>
+            <div class="course-index-card-bottom">
+                <div class="course-index-btn">
+                  <%= link_to 'View', course_path(course)%>
+                </div>
+                <div class="course-index-heart-wrapping">
+                  <i class="far fa-heart course-index-heart"></i>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>

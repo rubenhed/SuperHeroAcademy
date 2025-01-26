@@ -23,10 +23,8 @@ class BookingsController < ApplicationController
     )
 
     if @booking.save
-      flash[:alert] = "Booking successfully created!"
       redirect_to course_path(@booking.course_id)
     else
-      flash[:alert] = "Failed to create booking."
       render :new, status: :unprocessable_entity
     end
   end
