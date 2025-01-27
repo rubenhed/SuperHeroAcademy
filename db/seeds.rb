@@ -51,6 +51,7 @@ course1 = Course.create!(
   SYLLABUS
   price: 1400,
   level: 3,
+  category: 2,
   duration: 120,
   location: "Shibuya, Tokyo",
   start_time: Time.now + 1.week,
@@ -82,6 +83,7 @@ course2 = Course.create!(
   SYLLABUS
   price: 1600,
   level: 1,
+  category: 1,
   duration: 90,
   location: "Meguto, Tokyo",
   start_time: Time.now + 2.weeks,
@@ -113,6 +115,7 @@ course3 = Course.create!(
   SYLLABUS
   price: 2000,
   level: 0,
+  category: 2,
   duration: 60,
   location: "Setagaya, Tokyo",
   start_time: Time.now + 3.weeks,
@@ -146,6 +149,7 @@ course4 = Course.create!(
   SYLLABUS
   price: 1000,
   level: 0,
+  category: 0,
   duration: 90,
   location: "Hachioji, Tokyo",
   start_time: Time.now + 1.week,
@@ -207,6 +211,7 @@ course6 = Course.create!(
   SYLLABUS
   price: 1500,
   level: 0,
+  category: 2,
   duration: 60,
   location: "Yokohama, Kanagawa",
   start_time: Time.now + 3.weeks,
@@ -238,6 +243,7 @@ course7 = Course.create!(
   SYLLABUS
   price: 1500,
   level: 3, # Intermediate
+  category: 0,
   duration: 120,
   location: "Saitama City, Saitama",
   start_time: Time.now + 1.week,
@@ -269,6 +275,7 @@ course8 = Course.create!(
   SYLLABUS
   price: 1800,
   level: 2,
+  category: 1,
   duration: 180,
   location: "Tokyo, Japan",
   start_time: Time.now + 2.weeks,
@@ -300,6 +307,7 @@ course9 = Course.create!(
   SYLLABUS
   price: 2200,
   level: 2, # Advanced
+  category: 1,
   duration: 180,
   location: "Sapporo, Hokkaido",
   start_time: Time.now + 3.weeks,
