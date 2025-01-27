@@ -1,5 +1,5 @@
 <div class="col-md-3 col-sm-8">
-        <div class="card mb-4 shadow-sm p-3 course-index-fixed-card">
+        <div class="card mb-4 shadow-sm p-3 course-index-fixed-card <%= course.category %>">
           <div class="course-index-card-title"> <%= course.title %>
           </div>
           <div class="course-index-card-level">Difficulty: ⭐⭐⭐</div>
@@ -13,15 +13,15 @@
             <% end %>
           </div>
 
-          <div class="course-index-card-body">
+          <div class="course-index-card-body <%= course.category %>">
             <p class="course-index-card-teacher">Amy Huang | <%= course.location %></p>
-            <p class="course-index-card-text">¥3500</p>
+            <p class="course-index-card-text">¥<%= course.price %></p>
             <div class="course-index-card-bottom">
-                <div class="course-index-btn">
+                <div class="course-index-btn <%= course.category %>">
                   <%= link_to 'View', course_path(course)%>
                 </div>
                 <div class="course-index-heart-wrapping">
-                  <i class="far fa-heart course-index-heart"></i>
+                  <i class="far fa-heart course-index-heart <%= course.category %>"></i>
                 </div>
               </div>
           </div>

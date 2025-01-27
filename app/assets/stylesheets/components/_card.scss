@@ -7,8 +7,26 @@
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden; /* avoid content overflow */
+}
+.course-index-fixed-card.physical_enhancement, .course-index-btn.physical_enhancement a {
   background-color: #218380;
 }
+.course-index-fixed-card.mental_willpower, .course-index-btn.mental_willpower a {
+  background-color: #ff499e;
+}
+.course-index-fixed-card.nature_manipulation, .course-index-btn.nature_manipulation a {
+  background-color: #936639;
+}
+.course-index-heart.physical_enhancement {
+  color: #218380;
+}
+.course-index-heart.mental_willpower {
+  color: #ff499e;
+}
+.course-index-heart.nature_manipulation {
+  color: #936639;
+}
+
 .course-index-card-title {
   margin-bottom: 0;
   font-size: 1.3rem;
@@ -39,7 +57,6 @@
 }
 
 .course-index-card-body {
-  background-color: #a4c3b2;
   border-radius: 5%;
   margin-top:5%;
   height: 30%;
@@ -47,6 +64,16 @@
   overflow: hidden;
   position: relative;
 }
+.course-index-card-body.physical_enhancement {
+  background-color: #a4c3b2;
+}
+.course-index-card-body.mental_willpower {
+  background-color: #ffc2d4;
+}
+.course-index-card-body.nature_manipulation {
+  background-color: #ddb892;
+}
+
 .course-index-card-teacher {
   font-size: 15px;
   margin-bottom: 0;
@@ -73,26 +100,21 @@
 .course-index-btn {
   width: 20%;
   height: 5%;
-  background-color: #218380; /* Transparent background */
   color: white;
   border-radius: 10%;
   margin-right: 5%;
 }
 .course-index-btn a {
   display: inline-block;
-  background-color: #218380; /* 按鈕主色 (藍色) */
   color: #fff; /* 白色文字 */
   text-decoration: none;
   padding: 4px 8px; /* 調整按鈕大小 */
   font-size: 1rem; /* 調整字體大小 */
   border-radius: 10px; /* 圓角 */
-  transition: background-color 0.3s ease; /* 平滑過渡效果 */
 }
 
 .course-index-heart {
   font-size: 30px; /* 圖標大小 */
-  color: #218380; /* 預設灰色 */
-  transition: color 0.3s ease; /* 平滑過渡效果 */
 }
 // .course-index-btn:hover {
 //   border: 2px solid $color-fourth; /* White outline */

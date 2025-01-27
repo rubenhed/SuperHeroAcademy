@@ -13,6 +13,7 @@
       <div class='d-flex flex-row justify-content-between'>
         <%= f.input :price %>
         <%= f.input :level, collection: Course.levels %>
+        <%= f.input :category, collection: Course.categories %>
       </div>
       <div class='d-flex flex-row justify-content-between'>
         <%= f.input :start_time, html5: true %>
