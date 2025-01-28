@@ -30,6 +30,9 @@ class BookingsController < ApplicationController
   end
 
   def update
+    @booking = Booking.find(params[:id])
+    @booking.status = params[:status]
+    @booking.save
   end
 
   def new

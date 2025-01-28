@@ -23,7 +23,21 @@
           </div>
         </div>
       <% end %>
-    <% end %>
   </div>
+  <% @user.courses.each do |course| %>
+    <% course.bookings.each do |booking| %>
+      <% if booking.present? && booking.status == "pending" %>
+      <div class="border d-flex">
+        <p class="me-auto">Booker: <%= booking.user.name %>. Status: <%= booking.status %>.</p>
+        <%= button_to "Accept", booking_path(booking, status: :accepted), class: "btn btn-primary", method: :patch %>
+        <%= button_to "Reject", booking_path(booking, status: :rejected), class: "btn btn-primary", method: :patch %>
+      </div>
+      <% end %>
+    <% end %>
+  <% end %>
+
+
+    <% end %>
+
 
 </div>
