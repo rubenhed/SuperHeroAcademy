@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :courses do
     resources :favorites, only: [:new, :create]
   end
-  resources :favorites, only: [:destroy]
+  resources :favorites, only: [:index, :destroy]
 
   resources :bookings
   namespace :teacher do
