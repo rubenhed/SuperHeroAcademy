@@ -1,6 +1,9 @@
 class CoursesController < ApplicationController
   def index
     @courses = Course.all
+    if params[:query].present?
+      @courses = @courses.where("title ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def new
