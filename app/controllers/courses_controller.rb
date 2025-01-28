@@ -11,7 +11,6 @@ class CoursesController < ApplicationController
   end
 
   def create
-    # course_params[:level] = course_params[:level].to_i
     formatted_params = course_params
     formatted_params[:level] = formatted_params[:level].to_i
     @course = Course.new(formatted_params)
@@ -44,7 +43,6 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    # params[:level] = params[:level].to_i
     params.require(:course).permit(:title, :description, :duration, :level, :price, :location, :online, :start_time, :syllabus, :user_id, :photo)
   end
 
