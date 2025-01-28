@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :courses, dependent: :destroy
   has_many :bookings_as_student, through: :courses, source: :bookings
+  has_many :favorites, dependent: :destroy
 end
