@@ -4,14 +4,19 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    @favorite = Favorite.new(favorite_params)
-    @favorite.user = current_user
-    @favorite.course = Course.find(params[:course_id])
-    if @favorite.save
-      redirect_to course_path(@favorite.course)
-    else
-      render :new
-    end
+      @course = Course.find(params[:course_id])
+      favorite = current_user.favorites.find_by(course: @course)
+      if favorite
+        favorite.destroy
+        @favorited = false
+      else
+        Favorite.create(user: current_user, course: @course)
+        @favorited = true
+      end
+      respond_to do |format|
+        format.html { redirect_to course_path(@course) }
+        format.json { render json: { favorited: @favorited } }
+      end
   end
 
   def destroy

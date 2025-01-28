@@ -115,22 +115,8 @@
 
 .course-index-heart {
   font-size: 30px; /* 圖標大小 */
+  cursor: pointer;
 }
-// .course-index-btn:hover {
-//   border: 2px solid $color-fourth; /* White outline */
-//   background-color: transparent; /* Transparent background */
-//   color: $color-fourth; /* White text color */
-//   font-weight: bold;
-// }
-// .course-index-heart-wrapping {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-// .course-index-comment {
-//   margin-right: 100px;
-//   font-size: 1.8rem; /* 調整愛心大小 */
-//   color: gray; /* 初始顏色 */
-//   cursor: pointer;
-// }
+.fas {
+  color: red;
+}
