@@ -1,8 +1,12 @@
 
 <div class="container my-3">
-  <h1 class="text-decoration-underline">My courses</h1>
 
-  <div class="row">
+  <div class="d-flex align-items-center">
+    <h1 class="text-decoration-underline me-auto">My courses</h1>
+    <%= link_to "Open a new Course", new_course_path, class: "btn btn-primary "%>
+  </div>
+
+  <div class="row mt-2">
     <% if @user %>
       <% @user.courses.each do |course| %>
         <div class="col-4 mb-3">
@@ -21,4 +25,5 @@
       <% end %>
     <% end %>
   </div>
+
 </div>
