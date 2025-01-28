@@ -24,6 +24,7 @@
         </div>
       <% end %>
   </div>
+  <h1 class="text-decoration-underline">Sign ups</h1>
   <% @user.courses.each do |course| %>
     <% course.bookings.each do |booking| %>
       <% if booking.present? && booking.status == "pending" %>
