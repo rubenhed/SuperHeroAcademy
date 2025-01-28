@@ -41,6 +41,10 @@ class CoursesController < ApplicationController
   def update
   end
 
+  def favorites
+    @courses = Course.all
+  end
+
   private
 
   def course_params
