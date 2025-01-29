@@ -39,7 +39,7 @@
     <h2>Guess what you like....</h2>
     <div class="row">
     <% @category = @course.category%>
-    <% @guess_courses = Course.where(category: @category).to_a.sample(4)%>
+    <% @guess_courses = Course.where(category: @category).where.not(id: @course.id).to_a.sample(4)%>
     <% @guess_courses.each do |guess_course|%>
       <%= render "card", course: guess_course%>
     <% end %>
