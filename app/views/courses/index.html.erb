@@ -9,6 +9,9 @@
       <%= image_tag "superbaby.png", class: "course-index-cover-photo" %>
     </div>
   </div>
+  <div class="course-index-title-first">
+    <h1 class="course-index-hero-title">・・・・・・・Pick your superpower!・・・・・・・</h1>
+  </div>
   <div class="row">
     <% @courses.each do |course| %>
       <%= render "pages/card", course: course%>
