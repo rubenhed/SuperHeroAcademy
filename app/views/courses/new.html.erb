@@ -1,6 +1,7 @@
-<div class="row justify-content-center">
-  <div class="col-6 mt-5 bg-light">
-    <h1 class="my-4">Create a new course</h1>
+<%= render "pages/searchbar" %>
+<div class="row justify-content-center open-course-bg">
+  <div class="col-6 mt-5 open-course-format">
+    <h1 class="my-4">Only one step to be superhero teacher!</h1>
     <%= simple_form_for @course do |f| %>
       <%= f.input :title %>
       <%= f.input :description %>
@@ -19,8 +20,8 @@
         <%= f.input :start_time, html5: true %>
         <%= f.input :photo, as: :file %>
       </div>
-      <%= f.submit "Make this course", class: "btn btn-primary" %>
-      <%= link_to "Back to courses", courses_path, class: "btn btn-secondary my-3" %>
+      <%= f.submit "Make this course", class: "btn btn-primary open-course-btns-first" %>
+      <%= link_to "Back to courses", courses_path, class: "btn btn-secondary my-3 open-course-btns-second" %>
     <% end %>
   </div>
 </div>
