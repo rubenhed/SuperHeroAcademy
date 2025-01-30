@@ -1,7 +1,4 @@
-
-
 <div class="container">
-
   <%= render "pages/searchbar" %>
   <div class="course-index-cover-section">
     <div class="course-index-cover-word">
@@ -12,11 +9,9 @@
       <%= image_tag "superbaby.png", class: "course-index-cover-photo" %>
     </div>
   </div>
-
-
   <div class="row">
     <% @courses.each do |course| %>
-      <%= render "card", course: course%>
+      <%= render "pages/card", course: course%>
     <% end %>
   </div>
 </div>

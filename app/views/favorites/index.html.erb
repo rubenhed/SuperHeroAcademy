@@ -10,7 +10,7 @@
   </div>
   <div class="row">
     <% @favorites.each do |favorite| %>
-      <%= render "card", course: favorite.course%>
+      <%= render "pages/card", course: favorite.course%>
     <% end %>
   </div>
 </div>
