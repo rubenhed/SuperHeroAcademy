@@ -18,19 +18,25 @@
       </div>
     </div>
     <div class="course-show-price-tag">
-        <%= cl_image_tag @course.photo.key, class: "course-photo"%>
-        <div class="course-show-tag-info">
-          <div class="course-show-tag-info-location"><p>📍 <span style="font-weight: bold">Location:</span> <%=@course.location%></p></div>
-          <div class="course-show-tag-info-start-time"><p>⏱️ <span style="font-weight: bold">Start time:</span> <%=@course.start_time%> (Total: <%=@course.duration/60%> hours)</p></div>
-          <div class="course-show-tag-info-price"><h2>¥ <%=@course.price%></h2></div>
+      <%= cl_image_tag @course.photo.key, class: "course-photo"%>
+      <div class="course-show-tag-info">
+        <div class="course-show-tag-info-location">
+          <p>📍 <span style="font-weight: bold">Location:</span> <%=@course.location%></p>
         </div>
-        <div class="course-show-btns">
-          <%= button_to "I want to buy this course!", bookings_path(course_id: @course.id), class: "btn price-btn" %>
-          <div class="course-index-heart-wrapping course-show-heart" data-controller="favorite">
-            <% favorited = current_user.favorites.exists?(course:@course) if user_signed_in?%>
-            <i data-course-id="<%= @course.id %>" data-action="click->favorite#toggle" class="<%= favorited ? 'fas' : 'far' %> fa-heart course-index-heart course-show-heart<%= @course.category %>"></i>
-                </div>
+        <div class="course-show-tag-info-start-time">
+          <p>⏱️ <span style="font-weight: bold">Start time:</span> <%=@course.start_time%> (Total: <%=@course.duration/60%> hours)</p>
         </div>
+        <div class="course-show-tag-info-price">
+          <h2>¥ <%=@course.price%></h2>
+        </div>
+      </div>
+      <div class="course-show-btns">
+        <%= button_to "I want to buy this course!", bookings_path(course_id: @course.id), class: "btn price-btn" %>
+        <div class="course-index-heart-wrapping course-show-heart" data-controller="favorite">
+          <% favorited = current_user.favorites.exists?(course:@course) if user_signed_in?%>
+          <i data-course-id="<%= @course.id %>" data-action="click->favorite#toggle" class="<%= favorited ? 'fas' : 'far' %> fa-heart course-index-heart course-show-heart<%= @course.category %>"></i>
+        </div>
+      </div>
     </div>
   </div>
   <div class="course-show-details">
@@ -38,11 +44,11 @@
   <div class="container">
     <h2>Guess what you like....</h2>
     <div class="row">
-    <% @category = @course.category%>
-    <% @guess_courses = Course.where(category: @category).where.not(id: @course.id).to_a.sample(4)%>
-    <% @guess_courses.each do |guess_course|%>
-      <%= render "card", course: guess_course%>
-    <% end %>
-  </div>
+      <% @category = @course.category%>
+      <% @guess_courses = Course.where(category: @category).where.not(id: @course.id).to_a.sample(4)%>
+      <% @guess_courses.each do |guess_course|%>
+        <%= render "pages/card", course: guess_course%>
+      <% end %>
+    </div>
   </div>
 </div>

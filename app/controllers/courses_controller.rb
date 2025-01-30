@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
     formatted_params = course_params
     formatted_params[:level] = formatted_params[:level].to_i
     @course = Course.new(formatted_params)
-    @course.user = User.all.sample
+    @course.user = current_user
     if @course.save
       redirect_to course_path(@course)
     else
