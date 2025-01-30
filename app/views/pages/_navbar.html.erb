@@ -24,6 +24,7 @@
           <ul class="dropdown-menu dropdown-menu-end navbar-color">
             <li><%= link_to "My Bookings", bookings_path, class: "dropdown-item btn home-custom-sign-btn mb-0 text-white fw-bold" %></li>
             <li><%= link_to "My Courses", teacher_courses_path, class: "dropdown-item btn home-custom-sign-btn mb-0 text-white fw-bold" %></li>
+            <li><%= link_to "My Favorites", favorites_path, class: "dropdown-item btn home-custom-sign-btn mb-0 text-white fw-bold" %></li>
             <li><hr class="dropdown-divider"></li>
             <li><%= link_to "Log out", destroy_user_session_path,  method: :delete, data: { confirm: "Are you sure you want to log out?" }  , class: "dropdown-item btn home-custom-sign-btn text-white me-3" %></li>
           </ul>

@@ -4,8 +4,8 @@
     <h1 class="my-4">Only one step to be superhero teacher!</h1>
     <%= simple_form_for @course do |f| %>
       <%= f.input :title %>
-      <%= f.input :description %>
-      <%= f.input :syllabus %>
+      <%= f.input :description, as: :text, input_html: { maxlength: 400 } %>
+      <%= f.input :syllabus, as: :text, input_html: { rows: 8 } %>
       <%= f.input :location %>
       <div class='d-flex flex-row justify-content-between'>
         <%= f.input :duration %>
