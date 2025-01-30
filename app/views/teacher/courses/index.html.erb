@@ -6,7 +6,7 @@
     <div class="teacher-course-title">
       <h1 class="me-auto">🧑‍🏫 My courses</h1>
     </div>
-    <%= link_to "Open a new Course", new_course_path, class: "btn btn-primary"%>
+    <%= link_to "Open a new Course", new_course_path, class: "btn btn-primary teacher-course-btn"%>
   </div>
 
   <% if @user %>
@@ -21,12 +21,12 @@
     <% @user.courses.each do |course| %>
       <% course.bookings.each do |booking| %>
         <% if booking.present? && booking.status == "pending" %>
-          <div class="border d-flex">
-            <p class="me-auto">
-              Course: <%= course.title %>. Booker: <%= booking.user.name %>. Status: <%= booking.status %>.
-            </p>
-            <%= button_to "Accept", booking_path(booking, status: :accepted), class: "btn btn-primary", method: :patch %>
-            <%= button_to "Reject", booking_path(booking, status: :rejected), class: "btn btn-primary", method: :patch %>
+          <div class="d-flex justify-cotent-between approval-box align-items-center" id="booking_row_<%= booking.id%>">
+              <div class="me-auto align-items-center approval-detail">
+              <span style="font-weight: bolder">Course:</span> <%= course.title %>. <span style="font-weight: bolder">Booker: </span><%= booking.user.name %>. <span style="font-weight: bolder">Status: </span><%= booking.status %>.
+            </div>
+            <%= button_to "Accept", booking_path(booking, status: :accepted), class: "btn btn-primary teacher-course-btn approval-btn", method: :patch, data:{ turbo_method: :patch} %>
+            <%= button_to "Reject", booking_path(booking, status: :rejected), class: "btn btn-primary teacher-course-btn approval-btn", method: :patch, data:{ turbo_method: :patch} %>
           </div>
         <% end %>
       <% end %>

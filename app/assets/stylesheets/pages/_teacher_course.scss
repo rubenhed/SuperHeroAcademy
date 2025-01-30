@@ -21,3 +21,22 @@
   z-index: -1; /* 讓螢光筆在文字下方 */
   border-radius: 10px; /* 讓螢光筆邊緣更圓滑 */
 }
+
+.approval-box{
+  border: 3px dotted $color-third;
+  padding-left: 5px;
+}
+
+.teacher-course-btn {
+  background-color: $color-third;
+  border: none;
+  margin-bottom: 0;
+}
+.teacher-course-btn:hover {
+  background-color: $color-second;
+  border: none;
+  margin-bottom: 0;
+}
+.approval-btn {
+  margin-left: 5px;
+}

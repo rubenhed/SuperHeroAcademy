@@ -33,6 +33,11 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.status = params[:status]
     @booking.save
+
+    respond_to do |format|
+      format.turbo_stream
+      format.html { redirect_to request.referer || courses_path, notice: "Booking updated." }
+    end
   end
 
   def new
