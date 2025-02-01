@@ -16,6 +16,7 @@ class CoursesController < ApplicationController
   def create
     formatted_params = course_params
     formatted_params[:level] = formatted_params[:level].to_i
+    formatted_params[:category] = formatted_params[:category].to_i
     # We had to add the above lines because the level was being saved as a string. We need to convert it to an integer as we are using it in the model with enum.
     @course = Course.new(formatted_params)
     @course.user = current_user
