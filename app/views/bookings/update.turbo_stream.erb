@@ -1,7 +1,0 @@
-<%= turbo_stream.replace "booking_row_#{@booking.id}" do%>
-   <div class="d-flex justify-cotent-between approval-box align-items-center <%= @booking.status %>" id="booking_row_<%= @booking.id%>">
-              <div class="me-auto align-items-center approval-detail">
-              <span style="font-weight: bolder">Course:</span> <%= @booking.course.title %>. <span style="font-weight: bolder">Booker: </span><%= @booking.user.name %>. <span style="font-weight: bolder">Status: </span><%= @booking.status %>.
-            </div>
-          </div>
-<%end%>
