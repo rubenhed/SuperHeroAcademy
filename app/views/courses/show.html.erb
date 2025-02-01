@@ -42,10 +42,14 @@
       </div>
     </div>
   </div>
-  <div class="course-show-details">
+  <div class="container">
+    <h2 style="margin-top: 50px; margin-bottom: 50px; font-size: 50px" class="syllabus">Syllabus</h2>
+    <div class="course-show-syllabus">
+      <%= simple_format(@course.syllabus) %>
+      </div>
   </div>
   <div class="container">
-    <h2>Guess what you like....</h2>
+    <h2 style="font-size: 50px; margin-top: 70px;"class="syllabus">Guess what you like....</h2>
     <div class="row">
       <% @category = @course.category%>
       <% @guess_courses = Course.where(category: @category).where.not(id: @course.id).to_a.sample(4)%>
