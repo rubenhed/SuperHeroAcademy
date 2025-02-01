@@ -21,7 +21,10 @@
   z-index: -1; /* 讓螢光筆在文字下方 */
   border-radius: 10px; /* 讓螢光筆邊緣更圓滑 */
 }
-
+.syllabus {
+  color: $color-fourth;
+  font-weight: bold;
+}
 .approval-box{
   border: 3px dotted $color-third;
   padding-left: 5px;
