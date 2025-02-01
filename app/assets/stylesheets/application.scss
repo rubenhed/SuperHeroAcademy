@@ -14,7 +14,8 @@
 @import "pages/teacher_course";
 
 // <-----ensure the footer is at the bottom of every page----->>
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -31,3 +32,8 @@ html, body {
   flex: 1; /* fill in all empty blanks */
 }
 // <-----ensure the footer is at the bottom of every page----->>
+
+.avatar-option input:checked + .avatar-image {
+  border: 3px solid #007bff !important; /* Blue border for selected avatar */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
