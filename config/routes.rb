@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   namespace :teacher do
     resources :courses, only: [:index]
   end
+  # get "user", to: "users#edit"
+  # update "user", to: "users#update"
 
   # Defines the root path route ("/")
   # root "posts#index"
