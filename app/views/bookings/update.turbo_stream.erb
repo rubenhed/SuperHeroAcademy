@@ -3,7 +3,5 @@
               <div class="me-auto align-items-center approval-detail">
               <span style="font-weight: bolder">Course:</span> <%= @booking.course.title %>. <span style="font-weight: bolder">Booker: </span><%= @booking.user.name %>. <span style="font-weight: bolder">Status: </span><%= @booking.status %>.
             </div>
-            <%= button_to "Accept", booking_path(@booking, status: :accepted), class: "btn btn-primary teacher-course-btn approval-btn", method: :patch, data:{ turbo_method: :patch} %>
-            <%= button_to "Reject", booking_path(@booking, status: :rejected), class: "btn btn-primary teacher-course-btn approval-btn", method: :patch, data:{ turbo_method: :patch} %>
           </div>
 <%end%>
