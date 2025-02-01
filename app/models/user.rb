@@ -20,6 +20,6 @@ class User < ApplicationRecord
   private
 
   def set_default_avatar
-    self.avatar ||= "avatar-default.png" # Assign default only if avatar is nil
+    self.avatar ||= "avatarZZ.png" # Assign default only if avatar is nil
   end
 end
