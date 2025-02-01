@@ -40,6 +40,7 @@ class CoursesController < ApplicationController
   def update
     formatted_params = course_params
     formatted_params[:level] = formatted_params[:level].to_i
+    formatted_params[:category] = formatted_params[:category].to_i
     # @course = Course.find(params[:id])
     @course.update(formatted_params)
     redirect_to course_path(@course)
